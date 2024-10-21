@@ -14,7 +14,8 @@ header {
     background-color: rgb(79, 129, 204);
 }
 nav {
-    width: 100%;
+    width: 100%; 
+    
 }
 nav ul{
     display: flex;
@@ -46,6 +47,13 @@ nav img{
     display: block;
     margin: 0 auto;
 }
+.parrafo_presentacion h1 {
+    font-size: 30px;
+    font-family: Oswald;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
 
 .parrafo_presentacion p {
     font-size: 30px;
@@ -59,21 +67,77 @@ nav img{
 
 .clases {
     background-color: white;
-    margin: 10px 20px;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+    "clase1 clase2"
+    "clase3 clase4";
 }
-.clases div{
-    display: flex;
-    margin: 10px 20px;
+.clase1{
+    grid-area: clase1;
 }
-.clases img {
-    width: 30%;
-    height: 70%;
+.clase2{
+    grid-area: clase2;
+}
+.clase3{
+    grid-area: clase3;
+}
+.clase4{
+    grid-area: clase4;
+}
+
+.contenedor{
+    width:100%;
+    display:flex;
+    height:300px;
+    align-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.contenedor figure{
+    position: relative;
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+    cursor:pointer;
+}
+
+.contenedor figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+
+.contenedor figure .capa{
+    position: absolute;
+    top:0;
+    width:100%;
+    height: 100%;
+    background: rgba(11,103,123,0.7);
+    transition: all 500ms ease-out;
+    opacity:0;
+    visibility: hidden;
+    text-align: center;
+}
+
+.contenedor figure:hover > .capa{
+    opacity:1;
+    visibility:visible;
+}
+.contenedor figure:hover> .capa p{
+    color:#ffffff;
+    font-size: 15px;
+    line-height: 1.5;
+    transition: all 500ms ease-out;
 }
 /*fin seccion clases*/
 
 /*Seccion dedicaca al main profesores*/ 
 .profesores {
-    background: linear-gradient(to left, #3e6ef3, #ffffff);
+    background: linear-gradient(to left, #d1d5dd, #ffffff);
     
 }
 .profesores div{
@@ -89,6 +153,8 @@ nav img{
 .profesores img {
     width: 250px;
     height: 250px;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
 }
 
 .profesores p{
@@ -98,6 +164,34 @@ nav img{
 }
 
 /*Fin seeccion profesores*/
+
+/*Seccion dedicada a pagina de contacto*/
+
+.formulario_email{
+    background-color: white;
+    margin: 10px 20px;
+}
+.formulario_email h1 {
+    font-size: 30px;
+    font-family: Oswald;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+.formulario_email div{
+    display: block;
+    padding: 2px;
+    
+}
+.mapa{
+    margin: 10px 20px;
+}
+.mapa p{
+    font-size: 20px;
+    justify-content: right;
+}
+
+/*Fin seccion contacto*/
 
 /*Seccion dedicada al Estudio audiovisual*/
 
@@ -133,3 +227,193 @@ footer img{
     height: 40px;
 }
 /*fin seccion footer*/
+
+/* Media Query para pantallas con ancho máximo de 768px */
+@media (max-width: 768px) {
+    /*Index*/
+    .parrafo_presentacion h1 {
+        font-size: 24px; 
+        margin-top: 10px; 
+    }
+    .parrafo_presentacion video {
+        width: 100%;
+        height: 100%;
+        display: block;
+        margin-top: 10px;
+    }
+    .parrafo_presentacion p {
+        font-size: 24px; 
+        margin-top: 10px; 
+    }
+
+    /*Clases*/
+    .clases {
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "clase1"
+        "clase2"
+        "clase3"
+        "clase4"
+        ;
+    }
+    .clases img {
+        width: 100%; 
+        height: auto;
+    }
+    .contenedor {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .contenedor figure {
+        width: 90%; 
+        margin: 10px 0; 
+    }
+    .contenedor figure .capa{
+        position: absolute;
+        top:0;
+        width:100%;
+        height: 100%;
+        background: rgba(11,103,123,0.7);
+        transition: all 500ms ease-out;
+        opacity:0;
+        visibility: hidden;
+        text-align: center;
+    }
+    
+    .contenedor figure:hover > .capa{
+        opacity:1;
+        visibility:visible;
+    }
+    .contenedor figure:hover> .capa p{
+        color:#ffffff;
+        font-size: 15px;
+        line-height: 1.5;
+        transition: all 500ms ease-out;
+    }
+
+    /*Profesores*/
+    .profesores img {
+        width: 100%; 
+        height: auto; 
+    }
+
+    /*Contacto*/
+    .formulario_email{
+        background-color: white;
+        margin: 10px 20px;
+    }
+    .mapa{
+       width: auto; 
+        height: auto;
+    }
+
+    /*Navbar*/
+    nav ul {
+        flex-direction: row;
+        font-family: auto; 
+    }
+
+    nav h3 {
+        font-size: medium !important;
+        padding: 15px 10px !important; 
+    }
+
+    /*Footer*/
+    footer {
+        flex-direction: row; 
+    }
+
+    footer a {
+        padding: 5px; 
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    /*index*/
+    .parrafo_presentacion h1 {
+        font-size: 28px; 
+        margin-top: 15px; 
+    }
+
+    .parrafo_presentacion p {
+        font-size: 26px;  
+        margin-top: 15px; 
+    }
+
+    /*Clases*/
+    .clases {
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "clase1"
+        "clase2"
+        "clase3"
+        "clase4"
+        ;
+    }
+    .clases img {
+        width: 100%; 
+        height: auto;
+    }
+    .contenedor {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .contenedor figure {
+        width: 90%; 
+        margin: 10px 0; 
+    }
+    .contenedor figure .capa{
+        position: absolute;
+        top:0;
+        width:100%;
+        height: 100%;
+        background: rgba(11,103,123,0.7);
+        transition: all 500ms ease-out;
+        opacity:0;
+        visibility: hidden;
+        text-align: center;
+    }
+    
+    .contenedor figure:hover > .capa{
+        opacity:1;
+        visibility:visible;
+    }
+    .contenedor figure:hover> .capa p{
+        color:#ffffff;
+        font-size: 15px;
+        line-height: 1.5;
+        transition: all 500ms ease-out;
+    }
+
+    /*profesores*/
+    .profesores img {
+        width: 80%; 
+        height: auto; 
+    }
+
+    /*Contacto*/
+    .formulario_email h1 {
+        font-size: 28px; 
+    }
+
+    .mapa p {
+        font-size: 18px; 
+    }
+
+    /*Navbar*/
+    nav h3 {
+        font-size: large; 
+        padding: 10px 15px; 
+    }
+
+    /*footer*/
+    footer a {
+        padding: 8px; 
+    }
+}
