@@ -71,14 +71,20 @@ nav img{
 }
 /*fin seccion clases*/
 
-/*Seccion dedicaca al main profesores*/
+/*Seccion dedicaca al main profesores*/ 
 .profesores {
-    background-color: white;
-    margin: 10px 20px;
+    background: linear-gradient(to left, #3e6ef3, #ffffff);
+    
 }
 .profesores div{
     display: flex;
+    align-items: center; 
     margin: 10px 20px;
+}
+.text-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px; /* Espacio entre la imagen y el texto */
 }
 .profesores img {
     width: 250px;
@@ -90,6 +96,7 @@ nav img{
     justify-content: center;
     margin: 55px;
 }
+
 /*Fin seeccion profesores*/
 
 /*Seccion dedicada al Estudio audiovisual*/
