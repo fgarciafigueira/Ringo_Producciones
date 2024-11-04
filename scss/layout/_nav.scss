@@ -1,0 +1,25 @@
+header {
+    background-color: rgb(79, 129, 204);
+
+
+    nav {
+        width: 100%; 
+        ul{
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            list-style: none;
+        }
+        h3 {
+            text-decoration: none;
+            color:white;
+            padding: 10px 20px 10px;
+        }
+        img{
+            width: 40px;
+            height: 40px;
+            padding-top: 10px;
+        }
+    }
+
+}

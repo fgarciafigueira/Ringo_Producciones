@@ -1,0 +1,22 @@
+
+.clases {
+    background-color: white;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+    "clase1 clase2"
+    "clase3 clase4";
+}
+.clase1{
+    grid-area: clase1;
+}
+.clase2{
+    grid-area: clase2;
+}
+.clase3{
+    grid-area: clase3;
+}
+.clase4{
+    grid-area: clase4;
+}

@@ -1,0 +1,28 @@
+.estudio_audiovisual{
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    padding: 20px;
+
+    h1{
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+    }
+    video{
+        width: 300px;
+        height: auto;
+        margin-right: 40px;
+    }
+    ol{
+        font-family: Oswald;
+        font-size: 25px;
+        justify-content: center;
+        margin: 40px;
+        spam{
+            text-decoration: underline;
+            color: rebeccapurple;
+        }
+    }
+
+} 
