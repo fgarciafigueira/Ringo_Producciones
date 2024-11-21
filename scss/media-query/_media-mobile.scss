@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px){
+@media screen and (max-width: 764px){
     /*Index*/
     .parrafo_presentacion{
         h1 {
@@ -18,15 +18,15 @@
 
     }
     /*Clases*/
-    .clases {
+    .estudios {
         display: grid;
         grid-template-columns: 1fr; 
         grid-template-rows: auto;
         grid-template-areas: 
-        "clase1"
-        "clase2"
-        "clase3"
-        "clase4"
+        "estudio1"
+        "estudio2"
+        "estudio3"
+        "estudio4"
         ;
 
         img {
@@ -81,10 +81,60 @@
         margin: 10px 20px;
     }
     .mapa{
-       width: auto; 
+        width: auto; 
         height: auto;
+        p{
+            font-family: 'Oswald';
+            font-size: 20px;
+            padding-right: 15px !important;
+        }
     }
-
+    .row-wrap{
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: calc(-1* var(--bs-gutter-y));
+        margin-right: calc(-.5* var(--bs-gutter-x));
+        margin-left: calc(-.5* var(--bs-gutter-x));
+    }
+    /*Estudio 66*/
+    .titulo-estudio{
+        h1{
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            color: rebeccapurple;
+        }
+        h2{
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            margin-left:20px
+        }
+    }
+    
+    .estudio_audiovisual{
+        display: flex; 
+        justify-content: space-between; 
+        flex-wrap: wrap; 
+        padding: 20px;
+    
+        video{
+            width: 300px;
+            height: auto;
+            margin: 0px 20px;
+        }
+        ol{
+            font-family: 'Oswald';
+            font-size: 25px;
+            justify-content: center;
+            margin: 20px;
+            spam{
+                text-decoration: underline;
+            }
+        }
+    } 
     /*Navbar*/
     nav{
         ul {

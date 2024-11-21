@@ -1,7 +1,77 @@
+@charset "UTF-8";
 /*Control Sass*/
 * {
   margin: 0;
   padding: 0;
+}
+
+@keyframes caer {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0.1;
+  }
+}
+.clave-de-sol {
+  position: absolute;
+  top: -10vh;
+  font-size: 30px;
+  color: #000000;
+  opacity: 0.8;
+  animation: caer 5s linear infinite;
+}
+.clave-de-sol:nth-child(1) {
+  left: 10%;
+  animation-duration: 4s;
+  font-size: 40px;
+}
+.clave-de-sol:nth-child(2) {
+  left: 20%;
+  animation-duration: 5s;
+  font-size: 30px;
+}
+.clave-de-sol:nth-child(3) {
+  left: 30%;
+  animation-duration: 6s;
+  font-size: 50px;
+}
+.clave-de-sol:nth-child(4) {
+  left: 40%;
+  animation-duration: 4.5s;
+  font-size: 35px;
+}
+.clave-de-sol:nth-child(5) {
+  left: 50%;
+  animation-duration: 7s;
+  font-size: 25px;
+}
+.clave-de-sol:nth-child(6) {
+  left: 60%;
+  animation-duration: 6.5s;
+  font-size: 45px;
+}
+.clave-de-sol:nth-child(7) {
+  left: 70%;
+  animation-duration: 5.5s;
+  font-size: 35px;
+}
+.clave-de-sol:nth-child(8) {
+  left: 80%;
+  animation-duration: 8s;
+  font-size: 40px;
+}
+.clave-de-sol:nth-child(9) {
+  left: 90%;
+  animation-duration: 5s;
+  font-size: 30px;
+}
+.clave-de-sol:nth-child(10) {
+  left: 95%;
+  animation-duration: 7.5s;
+  font-size: 35px;
 }
 
 .oswald {
@@ -11,7 +81,7 @@
 }
 
 header {
-  background-color: rgb(79, 129, 204);
+  background-color: rgb(49, 97, 169);
 }
 header nav {
   width: 100%;
@@ -28,13 +98,13 @@ header nav h3 {
   padding: 10px 20px 10px;
 }
 header nav img {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   padding-top: 10px;
 }
 
 footer {
-  background-color: rgb(124, 171, 241);
+  background-color: rgb(109, 103, 103);
   display: flex;
   justify-content: center;
   padding: 0;
@@ -50,60 +120,75 @@ footer img {
   height: 40px;
 }
 
+@keyframes encender {
+  0% {
+    transform: scaleY(0); /* El video comienza en una línea */
+  }
+  100% {
+    transform: scaleY(1); /* El video se expande completamente */
+  }
+}
 .parrafo_presentacion {
   background-color: white;
 }
-.parrafo_presentacion video {
-  width: 50%;
+.parrafo_presentacion .video-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parrafo_presentacion .video-contenedor video {
+  width: 60%;
   height: 50%;
-  display: block;
-  margin: 0 auto;
-  border-radius: 5px;
+  object-fit: cover;
+  transform-origin: center; /* El punto de expansión es desde la parte superior */
+  transform: scaleY(0); /* Inicia con un 0% de altura */
+  animation: encender 3s ease-out forwards;
 }
 .parrafo_presentacion h1 {
-  font-size: 30px;
-  font-family: Oswald;
+  font-size: 45px;
+  font-family: "Osawald";
   margin: 20px;
   display: flex;
   justify-content: center;
+  color: rgb(41, 9, 9);
 }
 .parrafo_presentacion h3 {
-  font-size: 15px;
-  font-family: Oswald;
+  font-size: 25px;
+  font-family: "Osawald";
   margin: 20px;
   display: flex;
   justify-content: center;
 }
 .parrafo_presentacion p {
   font-size: 25px;
-  font-family: Oswald;
-  margin-top: 20px;
+  font-family: "Osawald";
+  margin: 20px;
   display: flex;
   justify-content: center;
 }
 
-.clases {
+.estudios {
   background-color: white;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
-  grid-template-areas: "clase1 clase2" "clase3 clase4";
+  grid-template-areas: "estudio1 estudio2" "estudio3 estudio4";
 }
 
-.clase1 {
-  grid-area: clase1;
+.estudio1 {
+  grid-area: estudio1;
 }
 
-.clase2 {
-  grid-area: clase2;
+.estudio2 {
+  grid-area: estudio2;
 }
 
-.clase3 {
-  grid-area: clase3;
+.estudio3 {
+  grid-area: estudio3;
 }
 
-.clase4 {
-  grid-area: clase4;
+.estudio4 {
+  grid-area: estudio4;
 }
 
 .contenedor {
@@ -152,28 +237,35 @@ footer img {
 }
 
 .profesores {
-  background: linear-gradient(to left, #d1d5dd, #ffffff);
+  background: linear-gradient(to left top, white, rgb(122, 120, 120));
 }
-.profesores div {
-  display: flex;
-  align-items: center;
-  margin: 10px 20px;
+.profesores .card {
+  max-width: 2000px;
 }
-.profesores img {
-  width: 250px;
-  height: 250px;
-  border-radius: 6px;
-  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+.profesores .card img {
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
-.profesores p {
+.profesores .card h5 {
+  font-size: 25px;
+  text-decoration: underline;
+  text-align: center;
+}
+.profesores .card p {
+  font-size: 19px;
+  text-align: justify;
+}
+
+.titulo-estudio h1 {
   font-size: 30px;
-  justify-content: center;
-  margin: 55px;
-}
-.profesores .text-content {
   display: flex;
-  flex-direction: column;
-  margin-left: 10px;
+  justify-content: center;
+  color: rebeccapurple;
+}
+.titulo-estudio h2 {
+  font-size: 24px;
+  display: flex;
+  justify-content: justify;
 }
 
 .estudio_audiovisual {
@@ -182,53 +274,62 @@ footer img {
   align-items: flex-start;
   padding: 20px;
 }
-.estudio_audiovisual h1 {
-  font-size: 30px;
-  display: flex;
-  justify-content: center;
-}
 .estudio_audiovisual video {
   width: 300px;
   height: auto;
   margin-right: 40px;
 }
 .estudio_audiovisual ol {
-  font-family: Oswald;
+  font-family: "Oswald";
   font-size: 25px;
   justify-content: center;
   margin: 40px;
 }
 .estudio_audiovisual ol spam {
   text-decoration: underline;
-  color: rebeccapurple;
+}
+.estudio_audiovisual ol li {
+  padding: 10px;
+}
+
+.row-wrap {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
 
 .formulario_email {
   background-color: white;
+  z-index: 1;
   margin: 10px 20px;
 }
-.formulario_email h1 {
-  font-size: 30px;
-  font-family: Oswald;
-  margin: 20px;
-  display: flex;
-  justify-content: center;
-}
-.formulario_email div {
-  display: block;
-  padding: 2px;
+.formulario_email button {
+  background-color: #87ce89;
+  border-radius: 3px;
 }
 
 .mapa {
   margin: 10px 20px;
+  z-index: 1;
+}
+.mapa iframe {
+  width: 550px;
+  height: 450px;
+  border-radius: 10px;
+  border: solid;
+  border-color: beige;
 }
 .mapa p {
-  font-family: Oswald;
+  font-family: "Oswald";
   font-size: 20px;
-  justify-content: right;
+  justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 764px) {
   /*Index*/
   .parrafo_presentacion h1 {
     font-size: 24px;
@@ -245,13 +346,13 @@ footer img {
     margin-top: 10px;
   }
   /*Clases*/
-  .clases {
+  .estudios {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "clase1" "clase2" "clase3" "clase4";
+    grid-template-areas: "estudio1" "estudio2" "estudio3" "estudio4";
   }
-  .clases img {
+  .estudios img {
     width: 100%;
     height: auto;
   }
@@ -298,6 +399,53 @@ footer img {
     width: auto;
     height: auto;
   }
+  .mapa p {
+    font-family: "Oswald";
+    font-size: 20px;
+    padding-right: 15px !important;
+  }
+  .row-wrap {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-0.5 * var(--bs-gutter-x));
+    margin-left: calc(-0.5 * var(--bs-gutter-x));
+  }
+  /*Estudio 66*/
+  .titulo-estudio h1 {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    color: rebeccapurple;
+  }
+  .titulo-estudio h2 {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+  }
+  .estudio_audiovisual {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  .estudio_audiovisual video {
+    width: 300px;
+    height: auto;
+    margin: 0px 20px;
+  }
+  .estudio_audiovisual ol {
+    font-family: "Oswald";
+    font-size: 25px;
+    justify-content: center;
+    margin: 20px;
+  }
+  .estudio_audiovisual ol spam {
+    text-decoration: underline;
+  }
   /*Navbar*/
   nav ul {
     flex-direction: row;
@@ -326,13 +474,13 @@ footer img {
     margin-top: 15px;
   }
   /*Clases*/
-  .clases {
+  .estudios {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "clase1" "clase2" "clase3" "clase4";
+    grid-template-areas: "estudio1" "estudio2" "estudio3" "estudio4";
   }
-  .clases img {
+  .estudios img {
     width: 100%;
     height: auto;
   }
@@ -371,11 +519,27 @@ footer img {
     height: auto;
   }
   /*Contacto*/
-  .formulario_email h1 {
-    font-size: 28px;
+  .mapa {
+    width: auto;
+    height: auto;
   }
   .mapa p {
-    font-size: 18px;
+    font-family: "Oswald";
+    font-size: 20px;
+    padding-right: 15px !important;
+  }
+  .row-wrap {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-0.5 * var(--bs-gutter-x));
+    margin-left: calc(-0.5 * var(--bs-gutter-x));
+  }
+  .formulario_email {
+    background-color: white;
+    margin: 10px 5px;
   }
   /*Navbar*/
   nav h3 {

@@ -1,34 +1,53 @@
+$margenes:20px;
+$displayers:flex;
+$familia:'Osawald';
+$contenido:center;
+
+@keyframes encender {
+    0% {
+      transform: scaleY(0); /* El video comienza en una línea */
+    }
+    100% {
+      transform: scaleY(1); /* El video se expande completamente */
+    }
+  }
+
+@mixin letras-style ($font-size, $font-family, $margin, $display, $justify){
+    font-size: $font-size;
+    font-family: $font-family;
+    margin: $margin;
+    display: $display;
+    justify-content: $justify;
+}
+
 .parrafo_presentacion{
     background-color: white;
+    
+    .video-contenedor{
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    video{
-        width: 50%;
-        height: 50%;
-        display: block;
-        margin: 0 auto;
-        border-radius: 5px;
+        video{
+            width: 60%;
+            height: 50%;
+            object-fit: cover;
+            transform-origin: center; /* El punto de expansión es desde la parte superior */
+            transform: scaleY(0); /* Inicia con un 0% de altura */
+            animation: encender 3s ease-out forwards;
+        }
     }
 
     h1 {
-        font-size: 30px;
-        font-family: Oswald;
-        margin: 20px;
-        display: flex;
-        justify-content: center;
+        @include letras-style(45px, $familia, $margenes, $displayers, $contenido);
+        color: rgb(41, 9, 9);
     }
     h3{
-        font-size: 15px;
-        font-family: Oswald;
-        margin: 20px;
-        display: flex;
-        justify-content: center;
+        @include letras-style(25px, $familia, $margenes, $displayers, $contenido)
     }
 
     p {
-        font-size: 25px;
-        font-family: Oswald;
-        margin-top: 20px;
-        display: flex;
-        justify-content: center;
+        @include letras-style(25px, $familia, $margenes, $displayers, $contenido)
+        
     }
 }

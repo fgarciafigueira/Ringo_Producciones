@@ -12,15 +12,15 @@
     }
 
     /*Clases*/
-    .clases {
+    .estudios {
         display: grid;
         grid-template-columns: 1fr; 
         grid-template-rows: auto;
         grid-template-areas: 
-        "clase1"
-        "clase2"
-        "clase3"
-        "clase4"
+        "estudio1"
+        "estudio2"
+        "estudio3"
+        "estudio4"
         ;
         img {
             width: 100%; 
@@ -73,17 +73,29 @@
     }
 
     /*Contacto*/
-    .formulario_email {
-        h1 {
-        font-size: 28px; 
+    .mapa{
+        width: auto; 
+        height: auto;
+        p{
+            font-family: 'Oswald';
+            font-size: 20px;
+            padding-right: 15px !important;
         }
+    }
+    .row-wrap{
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        display: flex;
+        flex-wrap: nowrap;
+        margin-top: calc(-1* var(--bs-gutter-y));
+        margin-right: calc(-.5* var(--bs-gutter-x));
+        margin-left: calc(-.5* var(--bs-gutter-x));
+    }
+    .formulario_email{
+        background-color: white;
+        margin: 10px 5px;
     }
 
-    .mapa{ 
-        p {
-        font-size: 18px; 
-        }
-    }
 
     /*Navbar*/
     nav {

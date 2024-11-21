@@ -1,0 +1,22 @@
+
+.estudios {
+    background-color: white;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+    "estudio1 estudio2"
+    "estudio3 estudio4";
+}
+.estudio1{
+    grid-area: estudio1;
+}
+.estudio2{
+    grid-area: estudio2;
+}
+.estudio3{
+    grid-area: estudio3;
+}
+.estudio4{
+    grid-area: estudio4;
+}

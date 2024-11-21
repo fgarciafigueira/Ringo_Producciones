@@ -1,17 +1,23 @@
+.row-wrap{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: calc(-1* var(--bs-gutter-y));
+    margin-right: calc(-.5* var(--bs-gutter-x));
+    margin-left: calc(-.5* var(--bs-gutter-x));
+}
+
+
+
 .formulario_email{
     background-color: white;
+    z-index: 1;
     margin: 10px 20px;
-    h1 {
-        font-size: 30px;
-        font-family: Oswald;
-        margin: 20px;
-        display: flex;
-        justify-content: center;
-    }
-    div{
-        display: block;
-        padding: 2px;
-        
+    
+    button{
+        background-color: #87ce89;
+        border-radius: 3px;
     }
 
 }

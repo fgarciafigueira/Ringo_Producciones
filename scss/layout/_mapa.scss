@@ -1,8 +1,16 @@
 .mapa{
     margin: 10px 20px;
+    z-index: 1;
+    iframe{
+        width:550px;
+        height: 450px;
+        border-radius: 10px;
+        border: solid;
+        border-color: beige;
+    }
     p{
-        font-family: Oswald;
+        font-family: 'Oswald';
         font-size: 20px;
-        justify-content: right;
+        justify-content: center;
     }
 }

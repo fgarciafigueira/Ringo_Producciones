@@ -1,0 +1,81 @@
+@keyframes caer {
+    0% {
+      transform: translateY(-10vh) rotate(0deg);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(110vh) rotate(360deg);
+      opacity: 0.1;
+    }
+}
+
+
+.clave-de-sol {
+        position: absolute;
+        top: -10vh;
+        font-size: 30px;
+        color: #000000;
+        opacity: 0.8;
+        animation: caer 5s linear infinite;
+
+      &:nth-child(1) {
+        left: 10%;
+        animation-duration: 4s;
+        font-size: 40px;
+      }
+      &:nth-child(2) {
+        left: 20%;
+        animation-duration: 5s;
+        font-size: 30px;
+      }
+      
+      &:nth-child(3) {
+        left: 30%;
+        animation-duration: 6s;
+        font-size: 50px;
+      }
+      
+      &:nth-child(4) {
+        left: 40%;
+        animation-duration: 4.5s;
+        font-size: 35px;
+      }
+      
+      &:nth-child(5) {
+        left: 50%;
+        animation-duration: 7s;
+        font-size: 25px;
+      }
+      
+      &:nth-child(6) {
+        left: 60%;
+        animation-duration: 6.5s;
+        font-size: 45px;
+      }
+      
+      &:nth-child(7) {
+        left: 70%;
+        animation-duration: 5.5s;
+        font-size: 35px;
+      }
+      
+      &:nth-child(8) {
+        left: 80%;
+        animation-duration: 8s;
+        font-size: 40px;
+      }
+      
+      &:nth-child(9) {
+        left: 90%;
+        animation-duration: 5s;
+        font-size: 30px;
+      }
+      
+      &:nth-child(10) {
+        left: 95%;
+        animation-duration: 7.5s;
+        font-size: 35px;
+      }
+}
+  
+  
